@@ -31,3 +31,10 @@ A web application that analyzes a resume and shows the results on a result page.
 Anjali Khandelwal
 
 [LinkedIn](https://linkedin.com/in/anjali-khandelwal-6ab477348) | [GitHub](https://github.com/Anjalikhandelwal12)
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/Home.pdf)
+
+### Result Page
+![Result Page](screenshots/resultpage.pdf)
