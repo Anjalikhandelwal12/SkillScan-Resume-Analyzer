@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result - SkillScan</title>
+    <style>
+        body { font-family: Arial; background: #f4f6f8; text-align: center; padding: 30px; }
+        .card { background: white; max-width: 600px; margin: auto; padding: 30px; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .score { font-size: 60px; font-weight: bold; color: #22c55e; }
+        .badge { display: inline-block; background: #dcfce7; color: #166534; padding: 6px 12px; margin: 4px; border-radius: 20px; font-weight: bold; font-size: 14px; }
+        .badge-red { display: inline-block; background: #fee2e2; color: #991b1b; padding: 6px 12px; margin: 4px; border-radius: 20px; font-weight: bold; font-size: 14px; }
+        .box { background: #f8fafc; padding: 15px; border-radius: 10px; margin-top: 15px; text-align: left; }
+        a { display: inline-block; margin-top: 20px; background: #2563eb; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2>Resume Analyzed! ✅</h2>
+    <p th:text="${resume.fileName}"></p>
+    <p>Job Role: <b th:text="${jobRole}"></b></p>
+
+    <div class="score"><span th:text="${score}"></span> / 100</div>
+    <p>Your ATS Score</p>
+
+    <div class="box">
+        <h3>Skills Found In Your Resume:</h3>
+        <span th:each="s : ${#strings.arraySplit(foundSkills, ',')}" class="badge" th:text="${s}"></span>
+        <p th:if="${#strings.isEmpty(foundSkills)}">No skills found</p>
+    </div>
+
+    <div class="box">
+        <h3>Missing Skills (Learn These):</h3>
+        <!-- Jar kahi missing nasel tar he dakhav -->
+        <p th:if="${#strings.isEmpty(missingSkills)}" style="color:green; font-weight:bold;">
+            🎉 Perfect! You have all skills required for this role.
+        </p>
+        <!-- Jar missing asel tar hech dakhav -->
+        <span th:each="s : ${#strings.arraySplit(missingSkills, ',')}" class="badge-red" th:text="${s}"></span>
+    </div>
+
+    <div class="box">
+        <h3>Suggestion:</h3>
+        <p th:if="${!#strings.isEmpty(missingSkills)}">
+            Add missing skills like <b th:text="${missingSkills}"></b> to increase your score to 95+
+        </p>
+        <p th:if="${#strings.isEmpty(missingSkills)}">
+            Your resume is fully ATS-ready for <b th:text="${jobRole}"></b> role. Keep it up!
+        </p>
+    </div>
+
+    <a href="/">Analyze Another Resume</a>
+</div>
+</body>
+</html>
