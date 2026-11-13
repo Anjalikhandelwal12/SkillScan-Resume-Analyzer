@@ -20,6 +20,14 @@ A web application that analyzes a resume and shows the results on a result page.
 - `repository` - data access layer
 - `templates` - index.html and result.html
 
+## Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### Result Page
+![Result Page](screenshots/result.png)
+
 ## How to Run
 1. Clone the repo: `git clone https://github.com/Anjalikhandelwal12/SkillScan-Resume-Analyzer.git`
 2. Open it in your IDE (IntelliJ / VS Code)
@@ -31,10 +39,3 @@ A web application that analyzes a resume and shows the results on a result page.
 Anjali Khandelwal
 
 [LinkedIn](https://linkedin.com/in/anjali-khandelwal-6ab477348) | [GitHub](https://github.com/Anjalikhandelwal12)
-## Screenshots
-
-### Home Page
-![Home Page](screenshots/Home.pdf)
-
-### Result Page
-![Result Page](screenshots/resultpage.pdf)
