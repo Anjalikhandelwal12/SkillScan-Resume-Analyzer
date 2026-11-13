@@ -1,3 +1,4 @@
+cd D:\SkillScanProject\resume-analyzer
 
 @'
 # SkillScan - Resume Analyzer
@@ -23,8 +24,7 @@ A web application that analyzes a resume and shows the results on a result page.
 - `templates` - index.html and result.html
 
 ## How to Run
-1. Clone the repo:
-   `git clone https://github.com/Anjalikhandelwal12/SkillScan-Resume-Analyzer.git`
+1. Clone the repo: `git clone https://github.com/Anjalikhandelwal12/SkillScan-Resume-Analyzer.git`
 2. Open it in your IDE (IntelliJ / VS Code)
 3. Configure the database in `src/main/resources/application.properties`
 4. Run: `./mvnw spring-boot:run`
@@ -32,5 +32,6 @@ A web application that analyzes a resume and shows the results on a result page.
 
 ## Author
 Anjali Khandelwal
+
 [LinkedIn](https://linkedin.com/in/anjali-khandelwal-6ab477348) | [GitHub](https://github.com/Anjalikhandelwal12)
 '@ | Set-Content README.md -Encoding UTF8
